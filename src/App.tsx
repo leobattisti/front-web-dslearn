@@ -1,11 +1,11 @@
 import './assets/styles/custom.scss';
 import './App.css';
 
-import Catalog from 'pages/Catalog';
+import RoutesTSX from 'RoutesTSX';
 
 function App() {
-  return ( 
-    <Catalog />
+  return(
+    <RoutesTSX />
   );
 }
 
