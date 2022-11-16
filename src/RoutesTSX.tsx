@@ -9,7 +9,7 @@ const RoutesTSX = () => (
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/products" element={<Catalog/>} />
+        <Route path="/aves" element={<Catalog/>} />
         <Route path="/admin" element={<Admin/>} />
       </Routes>
     </BrowserRouter>

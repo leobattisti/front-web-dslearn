@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
         <div className="container-fluid">
           <Link to="/" className="nav-logo-text">
-            <h4>Ds Catalog</h4>
+            <h4>Canarinho</h4>
           </Link>
 
           <button
@@ -29,10 +29,10 @@ const Navbar = () => {
                 <NavLink to="/">HOME</NavLink>
               </li>
               <li>
-                <NavLink to="/products">CATÁLOGO</NavLink>
+                <NavLink to="/aves">CATÁLOGO</NavLink>
               </li>
               <li>
-                <NavLink to="/admin">ADMIN</NavLink>
+                <NavLink to="/admin">ANOTAÇÕES</NavLink>
               </li>
             </ul>
           </div>

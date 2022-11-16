@@ -1,51 +1,46 @@
-import ProductCard from 'components/ProductCard';
+import AnotacaoCard from 'components/AnotacaoCard';
 import { useEffect, useState } from 'react';
 import { SpringPage } from 'types/vendor/spring';
-import { Product } from 'types/product';
+import { Ave } from 'types/ave';
 import { AxiosParams } from 'types/vendor/axios';
 import { BASE_URL } from 'util/request';
-import axios from 'axios'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+import './styles.css';
 
 const Catalog = () => {
-
-  const [page, setPage] = useState<SpringPage<Product>>();
+  const [page, setPage] = useState<SpringPage<Ave>>();
 
   useEffect(() => {
-    
-    const param : AxiosParams = {
+    const param: AxiosParams = {
       method: 'GET',
-      url: `${BASE_URL}/products`,
+      url: `${BASE_URL}/aves`,
       params: {
         page: 0,
-        size: 12
-      }
-    }
+        size: 20,
+      },
+    };
 
-    axios(param).then(response => {
+    axios(param).then((response) => {
       setPage(response.data);
-      console.log(page);
     });
-
-  }, [])
+  }, []);
 
   return (
-    <div className="container my-4">
+    <div className="container my-4 catalog-container">
+      <div className="row catalog-title-container">
+        <h1>Catálogo de aves</h1>
+      </div>
+
       <div className="row">
-        <div className="col-sm-6 col-lg-4 col-xl-3">
-          <p>Nada</p>
-        </div>
-        <div className="col-sm-6 col-lg-4 col-xl-3">
-        <p>Nada</p>
-        </div>
-        <div className="col-sm-6 col-lg-4 col-xl-3">
-          <p>Nada</p>
-        </div>
-        <div className="col-sm-6 col-lg-4 col-xl-3">
-        <p>Nada</p>
-        </div>
-        <div className="col-sm-6 col-lg-4 col-xl-3">
-        <p>Nada</p>
-        </div>
+        {page?.content.map((ave) => (
+          <div className="col-sm-6 col-lg-4 col-xl-3" key={ave.id}>
+            <Link to="/aves/1">
+              <AnotacaoCard ave={ave} />
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

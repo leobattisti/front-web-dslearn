@@ -1,25 +1,24 @@
 import './styles.css';
 
 import ProductPrice from 'components/ProductPrice';
-import { Product } from 'types/product';
+import { Ave } from 'types/ave';
 
 type Props = {
-     product: Product
+     ave: Ave;
 }
 
-const ProductCard = ( { product } : Props) => {
+const AnotacaoCard = ( { ave } : Props) => {
 
      return (
           <div className="base-card product-card">
                <div className="card-top-container">
-                    <img src={product.imgUrl} alt={product.name} />
+                    <h1>{ave.id} - {ave.nomPort}</h1>
                </div>
                <div className="card-bottom-container">
-                    <h6>{product.name}</h6>
-                    <ProductPrice price={product.price} />
+                    <h6>{ave.nomIngl}</h6>
                </div>
           </div>
      );
 }
 
-export default ProductCard;
+export default AnotacaoCard;

@@ -39,6 +39,13 @@
      height: auto;
 }
 
+.div-botoes {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     align-content: space-between;
+}
+
 @media (min-width: 576px){
      .home-container{
           padding: 15px;
