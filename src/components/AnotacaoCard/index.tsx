@@ -1,33 +1,33 @@
+import { Ave } from 'types/ave';
+
 import './styles.css';
 
-import ProductPrice from 'components/ProductPrice';
-import { Anotacao } from 'types/anotacao';
-
 type Props = {
-  anotacao: Anotacao;
+  ave: Ave;
 };
 
-const AnotacaoCard = ({ anotacao }: Props) => {
+const AnotacaoCard = ({ ave }: Props) => {
   return (
     <div className="base-card product-card">
       <div className="card-top-container">
-        <h4>{anotacao.ave.nomPort}</h4>
+        <h4>{ave.nomPort}</h4>
       </div>
       <div className="card-bottom-container">
         <div className="div-text">
-          <h6 className="descricao">Latim:</h6>
-          <h5>{anotacao.ave.nomLat}</h5>
+          <h6 className="descricao">Nome Latim:</h6>
+          <h5>{ave.nomLat}</h5>
         </div>
         <div className="div-text">
-          <h6 className="descricao">Ingles:</h6> <h5>{anotacao.ave.nomIngl}</h5>
+          <h6 className="descricao">Nome Ingles:</h6>
+          <h5>{ave.nomIngl}</h5>
+        </div>
+      <div className="div-text">
+          <h6 className="descricao">Familia:</h6>
+          <h5>{ave.familia}</h5>
         </div>
         <div className="div-text">
-          <h6 className="descricao">Família:</h6>{' '}
-          <h5>{anotacao.ave.familia}</h5>
-        </div>
-        <div className="div-text">
-          <h6 className="descricao">Habitat:</h6>{' '}
-          <h5>{anotacao.ave.habitat}</h5>
+          <h6 className="descricao">Habitat:</h6>
+          <h5>{ave.habitat}</h5>
         </div>
       </div>
     </div>
