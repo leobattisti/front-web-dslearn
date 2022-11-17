@@ -3,7 +3,7 @@ import { Usuario } from "./usuario"
 
 export type Anotacao = {
      id: number;
-     data: string;
+     data: Date;
      titulo: string;
      usuario: Usuario;
      ave: Ave;

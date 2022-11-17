@@ -1,6 +1,5 @@
 export type Ave = {
      id: number;
-     nome: string;
      nomPort: string;
      nomIngl: string;
      nomLat: string;

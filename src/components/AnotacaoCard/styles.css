@@ -19,6 +19,19 @@
 }
 
 .card-bottom-container h6 {
-     font-size: 18px;
+     font-size: 17px;
      color: #263238;
+     font-weight: 700;
+}
+.card-bottom-container h5 {
+     font-size: 17px;
+     color: #263238;
+     font-weight: 500;
+}
+
+.div-text {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     align-content: space-between;
 }

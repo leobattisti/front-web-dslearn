@@ -1,24 +1,37 @@
 import './styles.css';
 
 import ProductPrice from 'components/ProductPrice';
-import { Ave } from 'types/ave';
+import { Anotacao } from 'types/anotacao';
 
 type Props = {
-     ave: Ave;
-}
+  anotacao: Anotacao;
+};
 
-const AnotacaoCard = ( { ave } : Props) => {
-
-     return (
-          <div className="base-card product-card">
-               <div className="card-top-container">
-                    <h1>{ave.id} - {ave.nomPort}</h1>
-               </div>
-               <div className="card-bottom-container">
-                    <h6>{ave.nomIngl}</h6>
-               </div>
-          </div>
-     );
-}
+const AnotacaoCard = ({ anotacao }: Props) => {
+  return (
+    <div className="base-card product-card">
+      <div className="card-top-container">
+        <h4>{anotacao.ave.nomPort}</h4>
+      </div>
+      <div className="card-bottom-container">
+        <div className="div-text">
+          <h6 className="descricao">Latim:</h6>
+          <h5>{anotacao.ave.nomLat}</h5>
+        </div>
+        <div className="div-text">
+          <h6 className="descricao">Ingles:</h6> <h5>{anotacao.ave.nomIngl}</h5>
+        </div>
+        <div className="div-text">
+          <h6 className="descricao">Família:</h6>{' '}
+          <h5>{anotacao.ave.familia}</h5>
+        </div>
+        <div className="div-text">
+          <h6 className="descricao">Habitat:</h6>{' '}
+          <h5>{anotacao.ave.habitat}</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default AnotacaoCard;
